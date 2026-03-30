@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>o/</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="dabc012a7e3f27cf9da7e343ff9b6bab.jpg">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for white custom icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Enter Screen -->
+    <div id="enter-screen" class="enter-screen">
+        <span class="glow-text">[ click to enter ]</span>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+
+    <!-- Background -->
+    <div class="background" style="background-image: url('9ed7e3a2bde57597d28d42fe22510cf1.gif');"></div>
+    <div class="overlay"></div>
+    
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="a245f95869a60b15b03092ce7b2ad3a4.jpg" alt="Avatar" class="avatar">
+            <div class="username-container">
+                <h1 class="username glow-text" id="username">osk4rrv</h1>
+            </div>
+            <div class="location-row glow-text">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Poland</span>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="socials">
+            <a href="https://steamcommunity.com/id/osk4rrv/" target="_blank" class="social-icon glow-box"><i class="fa-brands fa-steam"></i></a>
+            <a href="https://discord.com/users/osk4rrv_alt/" target="_blank" class="social-icon glow-box"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://github.com/osk4rrv" target="_blank" class="social-icon glow-box"><i class="fa-brands fa-github"></i></a>
+            <a href="https://t.me/osk4rrv" target="_blank" class="social-icon glow-box"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+
+        <!-- Bottom View Container for crossfade animation -->
+        <div class="bottom-view-container">
+            <!-- Music Player Section -->
+            <div class="music-player glow-box" id="music-player">
+                <img src="0e28c5c8226a8f57bb265ab118b0ccfd.jpg" alt="Music Icon" class="music-icon">
+                <div class="music-info">
+                    <a href="https://open.spotify.com/album/13w8d6UGtXTUanptxjN27t?si=SDPOzxPQRsSxF727UsZefA" target="_blank" class="music-title glow-text">[ꜱᴡᴀɢꜰᴍ] 𝘆𝘂𝗻𝗴 𝗮𝗱𝗶𝘀𝘇 - 𝗻𝗶𝗲 𝗺𝗮𝗺 𝗰𝘇𝗮𝘀𝘂</a>
+                    
+                    <audio id="bg-audio" loop>
+                        <source src="YUNG ADISZ X MŁODY YERBA - NIE MAM CZASU (MUSIC VIDEO) PROD. VERZAYCE.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <div class="custom-player">
+                        <button id="play-pause-btn" class="player-btn glow-text">
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                        <div class="progress-volume-container">
+                            <div class="progress-container" id="progress-container">
+                                <div class="progress-fill" id="progress-fill"></div>
+                            </div>
+                            <div class="volume-container">
+                                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.3">
+                                <i class="fa-solid fa-volume-high volume-icon" id="volume-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Preview Section -->
+            <div class="github-preview glow-box" id="github-preview">
+                <div class="gh-profile">
+                    <img src="" alt="GitHub Avatar" class="gh-avatar" id="gh-avatar">
+                    <div class="gh-info">
+                        <h3 class="gh-name glow-text" id="gh-name">Loading...</h3>
+                        <p class="gh-login" id="gh-login">@osk4rrv</p>
+                    </div>
+                </div>
+                <div class="gh-chart-container" id="gh-chart-container">
+                    <!-- SVG generowany dynamicznie w JS -->
+                </div>
+                <!-- Licznik commitów -->
+                <div class="gh-stats">
+                    <div class="gh-status-dot" id="gh-status-dot"></div>
+                    <span id="gh-commits-text" class="glow-text">Loading...</span>
+                </div>
+            </div>
+
+            <div class="steam-preview glow-box" id="steam-preview">
+                <div class="st-level-badge glow-text" id="st-level-badge">LVL 0</div>
+                <div class="st-profile">
+                    <img src="" alt="Steam Avatar" class="st-avatar" id="st-avatar">
+                    <div class="st-info">
+                        <h3 class="st-name glow-text" id="st-name">osk4rrv</h3>
+                    </div>
+                </div>
+                <div class="st-status-row">
+                    <div class="st-status-dot" id="st-status-dot"></div>
+                    <span class="st-status-text glow-text" id="st-status-text">Loading Steam status...</span>
+                </div>
+                <div class="st-card-note">
+                    <i class="fa-brands fa-steam"></i>
+                    <span id="st-note-text">Checking current activity...</span>
+                </div>
+            </div>
+
+            <div class="discord-preview glow-box" id="discord-preview">
+                <div class="dc-profile">
+                    <img src="a245f95869a60b15b03092ce7b2ad3a4.jpg" alt="Discord Avatar" class="dc-avatar" id="dc-avatar">
+                    <div class="dc-info">
+                        <h3 class="dc-name glow-text" id="dc-name">osk4rrv_alt</h3>
+                        <p class="dc-login" id="dc-login">@osk4rrv_alt</p>
+                    </div>
+                </div>
+                <div class="dc-status-row">
+                    <div class="dc-status-dot" id="dc-status-dot"></div>
+                    <span class="dc-status-text glow-text" id="dc-status-text">Status unavailable</span>
+                </div>
+                <div class="dc-card-note">
+                    <i class="fa-brands fa-discord"></i>
+                    <span id="dc-note-text">Discord API needs numeric user ID for live presence.</span>
+                </div>
+            </div>
+
+            <div class="telegram-preview glow-box" id="telegram-preview">
+                <div class="tg-profile">
+                    <img src="photo_2025-07-11_01-27-46.jpg" alt="Telegram Avatar" class="tg-avatar" id="tg-avatar">
+                    <div class="tg-info">
+                        <h3 class="tg-name glow-text" id="tg-name">osk4rrv</h3>
+                        <p class="tg-login" id="tg-login">@osk4rrv</p>
+                    </div>
+                </div>
+                <div class="tg-card-note">
+                    <i class="fa-brands fa-telegram"></i>
+                    <span id="tg-note-text">ᴡʜᴏ ɪꜱ ᴏꜱᴋ4ʀʀᴠ ? ? ?</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
